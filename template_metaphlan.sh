@@ -4,9 +4,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mail-user=__EMAIL__
 #SBATCH --mail-type=__EMAIL_TYPE__
-#SBATCH --workdir=/project/def-banire/Labobioinfo/Jobs/__JOBID__/scripts/
-#SBATCH --output=/project/def-banire/Labobioinfo/Jobs/__JOBID__/results/_logs/metaphlan_slurm-%j.out
-#SBATCH --error=/project/def-banire/Labobioinfo/Jobs/__JOBID__/results/_logs/metaphlan-%j.err
+#SBATCH --workdir=__WORK_DIR__/__JOBID__/scripts/
+#SBATCH --output=__WORK_DIR__/__JOBID__/results/_logs/metaphlan_slurm-%j.out
+#SBATCH --error=__WORK_DIR__/__JOBID__/results/_logs/metaphlan-%j.err
 
 
 

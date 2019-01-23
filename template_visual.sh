@@ -4,9 +4,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mail-user=__EMAIL__
 #SBATCH --mail-type=__EMAIL_TYPE__
-#SBATCH --workdir=/project/def-banire/Labobioinfo/Jobs/__JOBID__/scripts/
-#SBATCH --output=/project/def-banire/Labobioinfo/Jobs/__JOBID__/results/_logs/visual_slurm-%j.out
-#SBATCH --error=/project/def-banire/Labobioinfo/Jobs/__JOBID__/results/_logs/visual-%j.err
+#SBATCH --workdir=__WORK_DIR__/__JOBID__/scripts/
+#SBATCH --output=__WORK_DIR__/__JOBID__/results/_logs/visual_slurm-%j.out
+#SBATCH --error=__WORK_DIR__/__JOBID__/results/_logs/visual-%j.err
 
 merge_metaphlan_tables ../results/profiled_samples/*.txt > ../results/merged_abundance_table.txt
 

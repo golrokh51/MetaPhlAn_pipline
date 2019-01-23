@@ -2,10 +2,10 @@
 
 
 
-temp_path=/project/def-banire/Labobioinfo/Jobs/MetaPhlAn_pipline
+temp_path=__WORK_DIR__/MetaPhlAn_pipline
 fld=$(ls -1  $temp_path/template_*.sh |awk -F"/" '{print NF}' | uniq)
 fld=$((fld+0))
-WORK_DIR=/project/def-banire/Labobioinfo/Jobs
+WORK_DIR=__WORK_DIR__
 
 for i in `ls -1  $temp_path/template_*.sh | cut -f$fld -d"/"`;  do  sed "s/__JOBID__/$1/g"  | sed "s/__EMAIL__/$2/g" | sed "s/__EMAIL_TYPE__/$3/g" $temp_path/$i > $WORK_DIR/$1/scripts/$i; done	
 
